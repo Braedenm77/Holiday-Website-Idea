@@ -44,7 +44,7 @@
 <h1>Choose Our Austin Dinner 🍽️</h1>
 <p>Pick the restaurant you’d like us to go to!</p>
 
-<form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+<form action="https://formspree.io/f/xykgaldb" method="POST">
 
     <div class="restaurant">
         <input type="checkbox" name="restaurant" value="Uchi" onclick="onlyOne(this)"> Uchi
