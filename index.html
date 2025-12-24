@@ -2,34 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mom's Christmas Dinner Choice</title>
+    <title>Mom's Christmas Dinner Choice 🎄</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #fafafa;
+            font-family: "Georgia", serif;
+            background: linear-gradient(to bottom, #fdf2f2, #fff);
+            margin: 0;
+            padding: 0;
         }
+
+        .card {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
         h1 {
             text-align: center;
+            color: #b22222;
         }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
         .restaurant {
-            margin: 10px 0;
+            margin: 12px 0;
+            font-size: 18px;
         }
+
         .email-section {
-            margin-top: 40px;
+            margin-top: 35px;
         }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
+
+        label {
             font-size: 16px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #b22222;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 20px;
+            font-size: 16px;
+            margin-top: 25px;
+            width: 100%;
             cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8b1a1a;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #555;
         }
     </style>
 
     <script>
-        // This makes sure only ONE checkbox can be selected
         function onlyOne(checkbox) {
             const checkboxes = document.getElementsByName('restaurant');
             checkboxes.forEach((item) => {
@@ -41,50 +88,57 @@
 
 <body>
 
-<h1>Choose Our Austin Dinner 🍽️</h1>
-<p>Pick the restaurant you’d like us to go to!</p>
+<div class="card">
+    <h1>🎄 Merry Christmas Mom 🎄</h1>
 
-<form action="https://formspree.io/f/xykgaldb" method="POST">
+    <p class="subtitle">
+        This is your official invitation to choose where we’ll go out for a special dinner together ❤️  
+        Pick your favorite spot below!
+    </p>
 
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Uchi" onclick="onlyOne(this)"> Uchi
+    <form action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Uchi" onclick="onlyOne(this)"> Uchi
+        </div>
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Este" onclick="onlyOne(this)"> Este
+        </div>
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Ezov" onclick="onlyOne(this)"> Ezov
+        </div>
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Intero" onclick="onlyOne(this)"> Intero
+        </div>
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Sammie's" onclick="onlyOne(this)"> Sammie's
+        </div>
+
+        <div class="restaurant">
+            <input type="checkbox" name="restaurant" value="Odd Duck" onclick="onlyOne(this)"> Odd Duck
+        </div>
+
+        <div class="email-section">
+            <label>
+                Your email (so I know it’s really you 😉):
+                <input type="email" name="email" required>
+            </label>
+        </div>
+
+        <input type="hidden" name="_to" value="braeden.mclaughlin7@gmail.com">
+        <input type="hidden" name="_subject" value="🎄 Mom's Christmas Dinner Choice">
+
+        <button type="submit">Confirm My Choice 🎁</button>
+    </form>
+
+    <div class="footer">
+        Made with love just for you ❤️
     </div>
-
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Este" onclick="onlyOne(this)"> Este
-    </div>
-
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Ezov" onclick="onlyOne(this)"> Ezov
-    </div>
-
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Intero" onclick="onlyOne(this)"> Intero
-    </div>
-
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Sammie's" onclick="onlyOne(this)"> Sammie's
-    </div>
-
-    <div class="restaurant">
-        <input type="checkbox" name="restaurant" value="Odd Duck" onclick="onlyOne(this)"> Odd Duck
-    </div>
-
-    <div class="email-section">
-        <label>
-            Your Email:
-            <br>
-            <input type="email" name="email" required>
-        </label>
-    </div>
-
-    <!-- This sends the email to you -->
-    <input type="hidden" name="_to" value="braeden.mclaughlin7@gmail.com">
-    <input type="hidden" name="_subject" value="Mom's Restaurant Choice">
-
-    <button type="submit">Confirm Choice</button>
-
-</form>
+</div>
 
 </body>
 </html>
